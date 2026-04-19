@@ -18,15 +18,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         
-        // ← Здесь мы устанавливаем LogInViewController как стартовый экран
-        let loginVC = LogInViewController()
-        let navigationController = UINavigationController(rootViewController: loginVC)
+        let loginViewController = LogInViewController()
+        let navigationController = UINavigationController(rootViewController: loginViewController)
         
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
-
-    // Остальные методы можно оставить как есть (или удалить, если не нужны)
+    
+    
     func sceneDidDisconnect(_ scene: UIScene) { }
     func sceneDidBecomeActive(_ scene: UIScene) { }
     func sceneWillResignActive(_ scene: UIScene) { }
