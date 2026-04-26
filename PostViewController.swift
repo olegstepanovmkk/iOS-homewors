@@ -8,6 +8,8 @@
 
 import Foundation
 
+import StorageService
+
 struct Post {
     let title: String
 }

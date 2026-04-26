@@ -9,6 +9,8 @@
 
 import UIKit
 
+import StorageService
+
 class ProfileViewController: UIViewController {
 
     
@@ -56,12 +58,16 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // === Разный цвет фона для Debug и Release ===
+        #if DEBUG
+        view.backgroundColor = .lightGray        // Серый — для Debug
+        #else
+        view.backgroundColor = .systemBlue       // Синий — для Release
+        #endif
+        
         setupUI()
         setupActions()
-        
-        view.backgroundColor = .systemBackground
         title = "Профиль"
-        
         navigationItem.hidesBackButton = false
     }
 

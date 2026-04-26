@@ -7,13 +7,18 @@
 
 
 import UIKit
+import StorageService   // ← Вот сюда
 
 class FeedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.backgroundColor = .systemBackground
         title = "Лента"
+        
+        // ... остальной твой код
+
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             title: "Открыть пост",

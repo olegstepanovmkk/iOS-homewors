@@ -10,6 +10,8 @@
 
 import UIKit
 
+import StorageService
+
 class ProfileHeaderView: UIView {
     
     
