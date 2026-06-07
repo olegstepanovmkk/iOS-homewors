@@ -24,7 +24,15 @@ class FeedViewController: UIViewController {
     }
     
     @objc private func openPost() {
-        let post = Post(title: "Важное объявление")
+        // Пример исправления в FeedViewController
+        let post = Post(
+            title: "Пост из ленты",
+            author: "netology",
+            description: "Это пример поста из FeedViewController",
+            image: "post1",           // убедись, что картинка есть в Assets
+            likes: 42,
+            views: 256
+        )
         
         let postVC = PostViewController()
         postVC.receivedPost = post
